@@ -12,7 +12,15 @@ This is not complete, but it does function. A couple of items to fix:
 3. Hardcoded 'secret'
 4. Hardcoded mautic uri
 
-comments on how to achieve these welcome.
+comments on how to achieve these welcome. For now, change:
+```
+appsscript.json:    "https://MY_URL_HARDCODED/"
+src/main.js:  const mautic_secret = `MYSECRETHARDCODED`;
+src/main.js:  const from = encodeURIComponent(`FROMHARDCODED`);
+src/main.js:  const base_url = `https://MY_URL_HARDCODED/plugin/Gmail/tracking.gif`;
+```
+
+To install this, run below (and then hit the run button in the web page that is opened):
 
 ```
 npm i
