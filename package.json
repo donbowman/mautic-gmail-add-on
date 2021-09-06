@@ -1,0 +1,21 @@
+{
+  "name": "mautic-gmail-add-on",
+  "version": "1.0.0",
+  "description": "Mautic Gmail Add-On",
+  "scripts": {
+    "build": "mkdir -p dist && npm run build:concat",
+    "build:concat": "cp node_modules/pako/dist/pako.js ./node_modules/crypto-js/crypto-js.js crc32.js phpcrypt.js dist/",
+    "publish": "npx @google/clasp push -f",
+    "lint": "eslint -c .eslintrc.json src/*.js",
+    "lint:fix": "eslint -c .eslintrc.json --fix src/*.js"
+  },
+  "author": "Don Bowman",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@google/clasp": "^2.4.1",
+    "crypto-js": "^4.1.1",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "pako": "^2.0.4"
+  }
+}
